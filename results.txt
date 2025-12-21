@@ -1,0 +1,171 @@
+
+
+SQL1
+
+
+a)
+first_name | surname
+-------------------------
+David      | Lynch
+Ron        | Howard
+Alex       | Donavitch
+Nick       | Cassavetes
+Michael    | Sucsy
+
+
+This query returns the first and last names of directors who were born in Canada. No variables were changed.
+
+
+b) 
+title
+-----------
+Blue Fire
+
+
+This query returns the movies that are directed by David Lynch. No variables were changed.
+
+
+c)
+first_name | surname   | title        | usd_budget | cad_budget | jpy_budget | rub_budget | eur_budget | chf_budget
+--------------------------------------------------------------------------------------------------------------------
+Joseph     | Anthony   | Dusk         | 7500000    | 10275000   | 1147500000 | 690000000  | 6825000   | 6600000
+Sali       | Doltri    | Dusk         | 7500000    | 10275000   | 1147500000 | 690000000  | 6825000   | 6600000
+Ryan       | Gosling   | The Notebook | 29000000   | 39730000   | 4437000000 | 2668000000 | 26390000  | 25520000
+Rachel     | McAdams   | The Notebook | 29000000   | 39730000   | 4437000000 | 2668000000 | 26390000  | 25520000
+Channing   | Tatum     | The Vow      | 30000000   | 41100000   | 4590000000 | 2760000000 | 27300000  | 26400000
+Rachel     | McAdams   | The Vow      | 30000000   | 41100000   | 4590000000 | 2760000000 | 27300000  | 26400000
+
+
+This query lists all actors who appeared in movies with a budget greater than $1,000,000, along with the budget displayed in different currencies. 
+The currencies were converted by multiplying the USD budget by the corresponding exchange rate. The attributes were then renamed accordingly.
+The Canadian currency was rounded to two decimal places by using the ROUND function and the budget was converted to a numeric type for the function to work properly.
+
+
+d)
+first_name | surname
+---------------------
+Sashah     | Angel
+Alex       | Donavitch
+
+
+This query returns the first and last names of directors whose surnames start with the letters “A” or “D”. No variables were changed.
+
+
+e)
+title
+-----------
+Echo
+
+
+This query returns the titles of comedy movies in which there is an actor who is under 40 years old. No variables were changed.
+
+
+f)
+first_name_1 | surname_1 | first_name_2 | surname_2
+----------------------------------------------------
+Joseph       | Anthony   | Sali         | Doltri
+Joseph       | Anthony   | Tony         | Hew
+Joseph       | Anthony   | Brad         | Pitt
+Sali         | Doltri    | Tony         | Hew
+Sali         | Doltri    | Brad         | Pitt
+Tony         | Hew       | Brad         | Pitt
+
+
+This query returns all pairs of actors who have blue eyes, listed in alphabetical order with no duplicate pairs. 
+The results are sorted by the first actor's surname, then first name, followed by the second actor's surname, then first name. No variables were changed.
+
+
+SQL2
+
+
+a)
+avg_age
+--------
+45.1
+
+
+This query calculates the average age of all actors by subtracting each actor’s birth year from 2025 (the current year). The attribute was named avg_age.
+
+
+b)
+country_count
+--------------
+3
+
+
+This query counts the number of unique countries in which the actors from the movie "Beautiful Mind" were born in. The attribute was named country_count.
+
+
+c)
+num_green_eyed
+---------------
+2
+
+
+This query counts how many actors have green coloured eyes and returns the total. The attribute was named num_green_eyed.
+
+
+d)
+movie_count
+------------
+2
+
+
+This query counts how many movies Brad Pitt appeared in and returns the total. The attribute was named movie_count.
+
+
+e)
+genre    | min_budget | avg_budget | max_budget
+------------------------------------------------
+Action   | 450000     | 450000     | 450000
+Comedy   | 550000     | 625000     | 700000
+Horror   | 29000000   | 29500000   | 30000000
+Sci-Fi   | 7500000    | 7500000    | 7500000
+Thriller | 300000     | 450000     | 600000
+
+
+This query calculates the minimum, average, and maximum budgets for each movie genre. 
+The query groups results by genre, then uses aggregation methods such as MIN, AVG, and MAX to calculate the values. 
+The results are returned and saved in attributes named min_budget, avg_budget and max_budget.
+
+
+f)
+title          | avg_rating
+----------------------------
+Beautiful Mind | 8.00
+Blue Fire      | 6.00
+Broken         | 6.00
+Dusk           | 9.00
+Echo           | 7.00
+
+
+This query calculates the average rating for each movie where the movie’s director was born in Toronto, or at least one of the movie’s actors has blue eyes. 
+The rating was rounded to two decimal places and stored in an attribute named avg_rating.
+
+
+g)
+title
+-------------------
+Beautiful Mind
+Blue Fire
+Dusk
+
+
+This query finds all movies that feature actors who were born in two or more different countries and returns their titles.
+
+
+h)
+title          | total_awards
+------------------------------
+Dusk           | 2
+Fall of a City | 1
+Blue Fire      | 1
+Echo           | 1
+Beautiful Mind | 0
+Broken         | 0
+The Notebook   | 0
+The Vow        | 0
+
+
+This query calculates how many awards each movie has received and sorts the results in descending order.
+
