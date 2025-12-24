@@ -1,5 +1,5 @@
 -- a) From table Actors find the average age.
-SELECT ROUND(AVG(2025 - year_of_birth), 1) AS avg_age
+SELECT ROUND(AVG(EXTRACT(YEAR FROM CURRENT_DATE) - year_of_birth), 1) AS avg_age
 FROM "Actor";
 
 -- b) Find the number of different countries in which actors from the movie “Beautiful Mind” were born.
@@ -58,3 +58,4 @@ FROM "Movie"
 LEFT JOIN "Award" ON "Movie".id = "Award"."id_Movie"
 GROUP BY "Movie".title
 ORDER BY total_awards DESC;
+
