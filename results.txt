@@ -1,6 +1,6 @@
 
 
-SQL1
+queries1:
 
 
 a)
@@ -75,7 +75,7 @@ This query returns all pairs of actors who have blue eyes, listed in alphabetica
 The results are sorted by the first actor's surname, then first name, followed by the second actor's surname, then first name. No variables were changed.
 
 
-SQL2
+queries2:
 
 
 a)
@@ -165,6 +165,7 @@ Beautiful Mind | 0
 Broken         | 0
 The Notebook   | 0
 The Vow        | 0
+
 
 
 This query calculates how many awards each movie has received and sorts the results in descending order.
