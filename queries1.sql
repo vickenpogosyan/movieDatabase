@@ -38,7 +38,7 @@ JOIN "MovieActor" ON "Movie".id = "MovieActor"."id_Movie"
 JOIN "Actor" ON "MovieActor"."id_Actor" = "Actor".id
 JOIN "MovieGenre" ON "Movie".id = "MovieGenre"."id_Movie"
 JOIN "Genre" ON "MovieGenre"."id_Genre" = "Genre".id
-WHERE "Genre".type = 'Comedy' AND (2025 - "Actor".year_of_birth) < 40;
+WHERE "Genre".type = 'Comedy' AND (EXTRACT(YEAR FROM CURRENT_DATE) - "Actor".year_of_birth) < 40;
 
 -- f) Find all the pairs of actors who have blue eye color. Produce pairs in alphabetic order, e.g., (Howard before Lynch) and do not produce pairs like (Lynch, Lynch)
 SELECT a1.first_name, a1.surname, a2.first_name, a2.surname
@@ -49,3 +49,4 @@ WHERE a1.eye_color = 'Blue' AND a2.eye_color = 'Blue'
         OR (a1.surname = a2.surname AND a1.first_name < a2.first_name)
       )
 ORDER BY a1.surname, a1.first_name, a2.surname, a2.first_name;
+
