@@ -1,2 +1,4 @@
-# movieDatabase
-This is my first project on GitHub. Collaborated in a team of four using PostgreSQL to design a relational database modeling movies, actors, directors, genres, cinemas, showtimes, tickets, awards, and more by creating individual joinable tables and populating them with realistic synthetic data. Developed and optimized 10+ SQL queries using joins, aggregation, and filtering to analyze relationships between movies, actor/director demographics, genres, budgets, ratings, and awards.
+# Movie Database
+This is my first project on GitHub.  
+ - Collaborated in a team of four using PostgreSQL to design a relational database modeling movies, actors, directors, genres, cinemas, showtimes, tickets, awards, and more by creating individual joinable tables and populating them with realistic synthetic data.  
+ - Developed and optimized 10+ SQL queries using joins, aggregation, and filtering to analyze relationships between movies, actor/director demographics, genres, budgets, ratings, and awards.
